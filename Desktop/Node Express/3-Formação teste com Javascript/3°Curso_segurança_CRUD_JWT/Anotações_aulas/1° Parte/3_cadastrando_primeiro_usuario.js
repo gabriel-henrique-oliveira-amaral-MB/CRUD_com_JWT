@@ -9,3 +9,4 @@
 // Dentro de auth podemos criar nossas rotas de seguranças
 // Vamos também em index importar nossas rotas de login 
 // Precisamos também criar um novo arquivo controller
+// Agoras que criamos os arquivos necessários faremos todas parte de verificação
