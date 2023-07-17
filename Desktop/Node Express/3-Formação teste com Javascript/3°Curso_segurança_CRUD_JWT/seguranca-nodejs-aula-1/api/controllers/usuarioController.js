@@ -10,6 +10,7 @@ class UsuarioController {
             const usuario = await usuarioService.cadastrar({ nome, email, senha})
     
             res.status(201).send(usuario)
+            
         } catch (error) {
             res.status(400).send({ message: error.message})
         }
@@ -28,6 +29,7 @@ class UsuarioController {
             const usuario = await usuarioService.buscarUsuarioPorId(id)
 
             res.status(200).json(usuario)
+
         } catch (error) {
             res.status(400).send({ message: error.message }) 
         }
@@ -41,6 +43,7 @@ class UsuarioController {
             const usuario = await usuarioService.editarUsuario({ id, nome, email })
 
             res.status(200).json(usuario)
+
         } catch (error) {
             res.status(400).send({ message: error.message })
         }

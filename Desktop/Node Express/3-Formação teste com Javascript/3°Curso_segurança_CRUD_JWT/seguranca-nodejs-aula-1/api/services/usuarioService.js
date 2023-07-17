@@ -63,7 +63,7 @@ class UsuarioService {
 
             await usuario.save()
 
-            return usuario
+            return await usuario.reload()
         } catch (error) {
             throw new Error('Erro ao editar usuario!')
         }

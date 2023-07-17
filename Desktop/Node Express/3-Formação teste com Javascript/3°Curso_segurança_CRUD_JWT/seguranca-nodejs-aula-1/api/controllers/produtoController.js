@@ -28,6 +28,7 @@ class ProdutoController {
             const produto = await produtoService.buscarProdutoPorId(id)
             
             res.status(200).json(produto) 
+            
         } catch (error) {
             console.log('Message error: ', error.message)
             res.status(400).send({ message: error.message })
@@ -40,7 +41,7 @@ class ProdutoController {
         try {
             await produtoService.deletarProdutoPorId(id)
             
-            res.status(200).send({ message: 'Produto deletada com sucesso!' })
+            res.status(200).send({ message: 'Produto deletado com sucesso!' })
             
         } catch (error) {
             console.log('Message error: ', error.message)
@@ -54,8 +55,9 @@ class ProdutoController {
         
         try {
             const produto = await produtoService.editarProduto({ id, nome, descricao, preco })
-            
+
             res.status(200).json(produto)
+
         } catch (error) {
             console.log('Message error: ', error.message)
             res.status(400).send({ message: error.message })
