@@ -1,0 +1,1 @@
+// Essa middleware faz a validação de usuário
